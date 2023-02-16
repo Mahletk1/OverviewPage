@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Layout from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
+import { Header} from "antd/es/layout/layout";
+import Sider from "antd/es/layout/Sider";
+import { Footer } from "antd/es/layout/layout";
+import { Topbar } from "./Topbar";
+import { Sidebar } from "./Sidebar";
+import { Overview } from "./Overview";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    return (
+        <>  
+        <Layout style={{
+                      'height':  window.innerHeight
+                    }}>
+        
+            <Layout>    
+                {/* <Collections /> */}
+                <Sidebar />
+                <Content
+                
+                style={{background:'#F7F8FC'}}>
+                  <Layout>
+                  <Topbar />
+                  <Content>
+                      <Overview />
+                  </Content>
+                  </Layout>
+                </Content>
+            </Layout>
+        </Layout>
+        </>
+        );
 }
-
 export default App;
