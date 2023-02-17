@@ -15,22 +15,20 @@ export class Topbar extends Component {
         return (
             <Header
             style={styling}>
-              <Row>
+              <Row gutter={64}>
                   <Col span={3}>
                     <span style={{ fontSize: '140%',fontWeight:'600', color: 'black' }}> Overview </span>
                   </Col>
-                
-              </Row>
-              
-              
-                <ul className="isoRight">
-                  <li className="isoSearch">
+                  <Col span={21} >
+                  <ul className="isoRight mr-auto" style={{listStyleType: 'none', margin:'0',padding:'0',}} >
+                  <li className="isoSearch" style={{ display:'inline', float: 'left'}}>
                    Hello1 {/* <TopbarSearch locale={locale} /> */}
                   </li>
 
                   <li
                     // onClick={() => this.setState({ selectedItem: "notification" })}
                     className="isoNotify"
+                    style={{ display:'inline', float: 'left'}}
                   >
                     Hello1{/* <TopbarNotification locale={locale} /> */}
                   </li>
@@ -38,6 +36,7 @@ export class Topbar extends Component {
                   <li
                     // onClick={() => this.setState({ selectedItem: "message" })}
                     className="isoMsg"
+                    style={{ display:'inline', float: 'left'}}
                   >
                     Hello1{/* <TopbarMessage locale={locale} /> */}
                   </li>
@@ -45,10 +44,13 @@ export class Topbar extends Component {
                   <li
                     // onClick={() => this.setState({ selectedItem: "user" })}
                     className="isoUser"
+                    style={{ display:'inline', float: 'left'}}
                   >
                     Hello1{/* <TopbarUser locale={locale} /> */}
                   </li>
                 </ul>
+                  </Col>
+              </Row>
             </Header>
           );
     }

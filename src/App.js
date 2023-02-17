@@ -23,7 +23,7 @@ const App = () => {
                 style={{background:'#F7F8FC'}}>
                   <Layout>
                   <Topbar />
-                  <Content>
+                  <Content style={{background:'#F7F8FC'}}>
                       <Overview />
                   </Content>
                   </Layout>
